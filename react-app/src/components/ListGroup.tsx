@@ -8,17 +8,19 @@ function ListGroup() {
         'Caliphate of Paris'
     ];
 
-    items = [];
+    // items = [];
 
     return (
         <>
             <h1>Boring (YAWN) List Group</h1>
             {items.length === 0 && <p>No item(s) found.</p>}
             <ul className="list-group">
-                {items.map(item => (
-                    <li className="list-group-item" key={item}>{item}</li>
+                {items.map((item, index) => (
+                    <li className="list-group-item" key={index} onClick={() => console.log(index)}>
+                        {item}
+                    </li>
                 ))}
-            </ul>
+            </ul >
         </>);
 
 }
