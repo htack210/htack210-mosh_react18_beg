@@ -10,15 +10,15 @@ function ListGroup() {
 
     items = [];
 
-    const getMessage = () => {
-        if (items.length === 0) return <p>No item(s) found.</p>;
-        return null;
-    };
+    // const getMessage = () => {
+    //     if (items.length === 0) return <p>No item(s) found.</p>;
+    //     return null;
+    // };
 
     return (
         <>
             <h1>Boring (YAWN) List Group</h1>
-            {getMessage()}
+            {items.length === 0 && <p>No item(s) found.</p>}
             <ul className="list-group">
                 {items.map(item => (
                     <li className="list-group-item" key={item}>{item}</li>
