@@ -10,11 +10,6 @@ function ListGroup() {
 
     items = [];
 
-    // const getMessage = () => {
-    //     if (items.length === 0) return <p>No item(s) found.</p>;
-    //     return null;
-    // };
-
     return (
         <>
             <h1>Boring (YAWN) List Group</h1>
