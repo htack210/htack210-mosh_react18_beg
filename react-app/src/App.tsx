@@ -1,6 +1,7 @@
 // import ListGroup from "./components/ListGroup";
 
 import Alert from "./components/Alert";
+import MyButton from "./components/MyButton";
 
 function App() {
   // const cities = [
@@ -14,6 +15,9 @@ function App() {
   // const handleSelectItem = (index: number, item: string) => {
   //   console.log(index, item);
   // };
+  const handleClick = () => {
+    console.log("Button clicked");
+  };
 
   return (
     <>
@@ -21,6 +25,9 @@ function App() {
       <Alert>
         <h1>This is an alert!</h1>
       </Alert>
+      <MyButton onClick={handleClick}>
+        <h1>Click Me</h1>
+      </MyButton>
     </>
   );
 }
