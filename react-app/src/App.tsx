@@ -1,15 +1,20 @@
 import ListGroup from "./components/ListGroup";
 
 function App() {
-  let cities = [
+  const cities = [
     'People\'s Republic of New York',
     'People\'s Republic of San Francisco',
     'Tokyo',
     'Caliphate of London',
     'Caliphate of Paris'
   ];
+
+  const handleSelectItem = (index: number, item: string) => {
+    console.log(index, item);
+  };
+
   return <div>
-    <ListGroup items={cities} heading="Cities" />
+    <ListGroup items={cities} heading="Cities" onSelectItem={(item) => handleSelectItem(cities.indexOf(item), item)} />
   </div>;
 }
 
