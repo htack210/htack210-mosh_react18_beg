@@ -1,9 +1,12 @@
 // import ListGroup from "./components/ListGroup";
 
+import { useState } from "react";
 import Alert from "./components/Alert";
 import MyButton from "./components/MyButton";
 
 function App() {
+  const [showAlert, setShowAlert] = useState(false);
+
   // const cities = [
   //   'People\'s Republic of New York',
   //   'People\'s Republic of San Francisco',
@@ -16,19 +19,21 @@ function App() {
   //   console.log(index, item);
   // };
   const handleClick = () => {
-    console.log("Button clicked");
+    setShowAlert(true);
   };
 
   return (
-    <>
+    <div>
       {/* <ListGroup items={cities} heading="Cities" onSelectItem={handleSelectItem} /> */}
-      <Alert>
+
+      {showAlert && <Alert onClose={() => setShowAlert(false)}>
         <h1>This is an alert!</h1>
-      </Alert>
+      </Alert>}
+
       <MyButton onClick={handleClick}>
         <h1>Click Me</h1>
       </MyButton>
-    </>
+    </div>
   );
 }
 
