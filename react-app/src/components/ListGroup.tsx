@@ -1,9 +1,9 @@
-import { useState, type MouseEvent } from 'react';
+import { useState } from 'react';
 
 interface ListGroupProps {
     items: string[];
     heading: string;
-    onSelectItem: (item: string) => void;
+    onSelectItem: (index: number, item: string) => void;
 }
 
 function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
@@ -20,7 +20,7 @@ function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
                         key={index}
                         onClick={() => {
                             setSelectedIndex(index);
-                            onSelectItem(item);
+                            onSelectItem(index, item);
                         }}
                     >
                         {item}
