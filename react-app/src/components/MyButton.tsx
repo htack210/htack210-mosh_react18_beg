@@ -2,11 +2,11 @@ import { type ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  color: string;
+  color?: string;
   onClick: () => void;
 }
 
-const MyButton = ({ children, onClick, color }: Props) => {
+const MyButton = ({ children, onClick, color = 'primary' }: Props) => {
   return (
     <button
       type="button"

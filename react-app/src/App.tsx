@@ -25,7 +25,7 @@ function App() {
       <Alert>
         <h1>This is an alert!</h1>
       </Alert>
-      <MyButton color="primary" onClick={handleClick}>
+      <MyButton onClick={handleClick}>
         <h1>Click Me</h1>
       </MyButton>
     </>
